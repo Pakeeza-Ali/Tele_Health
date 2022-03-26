@@ -1,0 +1,66 @@
+﻿@model Tele_Health.Models.APPOINTMENT_tbl
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>APPOINTMENT_tbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DOCTOR_SCHEDULE.TOTAL_APPOINTMENTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOCTOR_SCHEDULE.TOTAL_APPOINTMENTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PATIENT_tbl.PATIENT_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PATIENT_tbl.PATIENT_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APPOINTMENT_NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APPOINTMENT_NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APPOINTMENT_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APPOINTMENT_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOCTOR_FID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOCTOR_FID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCHEDULE_FID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCHEDULE_FID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.APPOINTMENT_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

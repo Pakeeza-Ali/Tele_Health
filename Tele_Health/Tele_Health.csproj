@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BFE466B-8EDF-419B-A7BC-04811ED1E25F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tele_Health</RootNamespace>
+    <AssemblyName>Tele_Health</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44372</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ADMIN_tblController.cs" />
+    <Compile Include="Controllers\APPOINTMENT_tblController.cs" />
+    <Compile Include="Controllers\DEPARTMENT_tblController.cs" />
+    <Compile Include="Controllers\DOCTOR_SCHEDULEController.cs" />
+    <Compile Include="Controllers\DOCTOR_tblController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HOSPITAL_tblController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ADMIN_tbl.cs" />
+    <Compile Include="Models\APPOINTMENT_tbl.cs" />
+    <Compile Include="Models\DEPARTMENT_tbl.cs" />
+    <Compile Include="Models\DOCTOR_SCHEDULE.cs" />
+    <Compile Include="Models\DOCTOR_tbl.cs" />
+    <Compile Include="Models\FEEDBACK_tbl.cs" />
+    <Compile Include="Models\HOSPITAL_tbl.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\PATIENT_tbl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Admin\assets\css\bootstrap.css" />
+    <Content Include="Content\Admin\assets\css\style-responsive.css" />
+    <Content Include="Content\Admin\assets\css\style.css" />
+    <Content Include="Content\Admin\assets\css\table-responsive.css" />
+    <Content Include="Content\Admin\assets\css\to-do.css" />
+    <Content Include="Content\Admin\assets\css\zabuto_calendar.css" />
+    <Content Include="Content\Admin\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Admin\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Admin\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Admin\assets\img\blog-bg.jpg" />
+    <Content Include="Content\Admin\assets\img\checkbox-gray.png" />
+    <Content Include="Content\Admin\assets\img\friends\fr-01.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-02.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-03.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-04.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-05.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-06.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-07.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-08.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-09.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-10.jpg" />
+    <Content Include="Content\Admin\assets\img\friends\fr-11.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram.jpg" />
+    <Content Include="Content\Admin\assets\img\login-bg.jpg" />
+    <Content Include="Content\Admin\assets\img\lorde.jpg" />
+    <Content Include="Content\Admin\assets\img\mask.png" />
+    <Content Include="Content\Admin\assets\img\ny.jpg" />
+    <Content Include="Content\Admin\assets\img\portfolio\port01.jpg" />
+    <Content Include="Content\Admin\assets\img\portfolio\port02.jpg" />
+    <Content Include="Content\Admin\assets\img\portfolio\port03.jpg" />
+    <Content Include="Content\Admin\assets\img\portfolio\port04.jpg" />
+    <Content Include="Content\Admin\assets\img\portfolio\port05.jpg" />
+    <Content Include="Content\Admin\assets\img\portfolio\port06.jpg" />
+    <Content Include="Content\Admin\assets\img\product.jpg" />
+    <Content Include="Content\Admin\assets\img\product.png" />
+    <Content Include="Content\Admin\assets\img\profile-01.jpg" />
+    <Content Include="Content\Admin\assets\img\profile-02.jpg" />
+    <Content Include="Content\Admin\assets\img\radio-gray.png" />
+    <Content Include="Content\Admin\assets\img\ui-danro.jpg" />
+    <Content Include="Content\Admin\assets\img\ui-divya.jpg" />
+    <Content Include="Content\Admin\assets\img\ui-sam.jpg" />
+    <Content Include="Content\Admin\assets\img\ui-sherman.jpg" />
+    <Content Include="Content\Admin\assets\img\ui-zac.jpg" />
+    <Content Include="Content\Admin\assets\img\weather.jpg" />
+    <Content Include="Content\Admin\assets\img\zoom.png" />
+    <Content Include="Content\Admin\assets\js\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="Content\Admin\assets\js\bootstrap-switch.js" />
+    <Content Include="Content\Admin\assets\js\bootstrap.min.js" />
+    <Content Include="Content\Admin\assets\js\calendar-conf-events.js" />
+    <Content Include="Content\Admin\assets\js\chart-master\Chart.js" />
+    <Content Include="Content\Admin\assets\js\chartjs-conf.js" />
+    <Content Include="Content\Admin\assets\js\common-scripts.js" />
+    <Content Include="Content\Admin\assets\js\easy-pie-chart.js" />
+    <Content Include="Content\Admin\assets\js\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\Admin\assets\js\fancybox\jquery.fancybox.js" />
+    <Content Include="Content\Admin\assets\js\form-component.js" />
+    <Content Include="Content\Admin\assets\js\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="Content\Admin\assets\js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\Admin\assets\js\gritter-conf.js" />
+    <Content Include="Content\Admin\assets\js\gritter\css\jquery.gritter.css" />
+    <Content Include="Content\Admin\assets\js\gritter\css\jquery.gritter0.css" />
+    <Content Include="Content\Admin\assets\js\gritter\images\gritter-light.png" />
+    <Content Include="Content\Admin\assets\js\gritter\images\gritter-long.png" />
+    <Content Include="Content\Admin\assets\js\gritter\images\gritter.png" />
+    <Content Include="Content\Admin\assets\js\gritter\images\ie-spacer.gif" />
+    <Content Include="Content\Admin\assets\js\gritter\js\jquery.gritter.js" />
+    <Content Include="Content\Admin\assets\js\jquery-1.8.3.min.js" />
+    <Content Include="Content\Admin\assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="Content\Admin\assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="Content\Admin\assets\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Content\Admin\assets\js\jquery.backstretch.min.js" />
+    <Content Include="Content\Admin\assets\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="Content\Admin\assets\js\jquery.js" />
+    <Content Include="Content\Admin\assets\js\jquery.nicescroll.js" />
+    <Content Include="Content\Admin\assets\js\jquery.scrollTo.min.js" />
+    <Content Include="Content\Admin\assets\js\jquery.sparkline.js" />
+    <Content Include="Content\Admin\assets\js\jquery.tagsinput.js" />
+    <Content Include="Content\Admin\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\Admin\assets\js\morris-conf.js" />
+    <Content Include="Content\Admin\assets\js\sparkline-chart.js" />
+    <Content Include="Content\Admin\assets\js\tasks.js" />
+    <Content Include="Content\Admin\assets\js\zabuto_calendar.js" />
+    <Content Include="Content\Admin\assets\lineicons\fonts\linecons.svg" />
+    <Content Include="Content\Admin\assets\lineicons\index.html" />
+    <Content Include="Content\Admin\assets\lineicons\lte-ie7.js" />
+    <Content Include="Content\Admin\assets\lineicons\style.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Doctor\assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\Doctor\assets\css\bootstrap.min.css" />
+    <Content Include="Content\Doctor\assets\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\Doctor\assets\css\font-awesome.min.css" />
+    <Content Include="Content\Doctor\assets\css\fullcalendar.min.css" />
+    <Content Include="Content\Doctor\assets\css\select2.min.css" />
+    <Content Include="Content\Doctor\assets\css\style.css" />
+    <Content Include="Content\Doctor\assets\css\tagsinput.css" />
+    <Content Include="Content\Doctor\assets\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Content\Doctor\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\Doctor\assets\img\attachment.png" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-01.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-02.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-03.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-04.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-thumb-01.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-thumb-02.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-thumb-03.jpg" />
+    <Content Include="Content\Doctor\assets\img\blog\blog-thumb-04.jpg" />
+    <Content Include="Content\Doctor\assets\img\calander.png" />
+    <Content Include="Content\Doctor\assets\img\clock.png" />
+    <Content Include="Content\Doctor\assets\img\doctor-03.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-01.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-02.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-03.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-04.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-05.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-06.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-07.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-08.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-09.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-10.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-11.jpg" />
+    <Content Include="Content\Doctor\assets\img\doctor-thumb-12.jpg" />
+    <Content Include="Content\Doctor\assets\img\favicon.ico" />
+    <Content Include="Content\Doctor\assets\img\logo-dark.png" />
+    <Content Include="Content\Doctor\assets\img\logo.png" />
+    <Content Include="Content\Doctor\assets\img\patient-thumb-01.jpg" />
+    <Content Include="Content\Doctor\assets\img\patient-thumb-02.jpg" />
+    <Content Include="Content\Doctor\assets\img\placeholder-thumb.jpg" />
+    <Content Include="Content\Doctor\assets\img\placeholder.jpg" />
+    <Content Include="Content\Doctor\assets\img\sent.png" />
+    <Content Include="Content\Doctor\assets\img\user-02.jpg" />
+    <Content Include="Content\Doctor\assets\img\user-03.jpg" />
+    <Content Include="Content\Doctor\assets\img\user-04.jpg" />
+    <Content Include="Content\Doctor\assets\img\user-05.jpg" />
+    <Content Include="Content\Doctor\assets\img\user-06.jpg" />
+    <Content Include="Content\Doctor\assets\img\user.jpg" />
+    <Content Include="Content\Doctor\assets\img\video-call.jpg" />
+    <Content Include="Content\Doctor\assets\js\app.js" />
+    <Content Include="Content\Doctor\assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\Doctor\assets\js\bootstrap.min.js" />
+    <Content Include="Content\Doctor\assets\js\Chart.bundle.js" />
+    <Content Include="Content\Doctor\assets\js\chart.js" />
+    <Content Include="Content\Doctor\assets\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\Doctor\assets\js\fullcalendar.min.js" />
+    <Content Include="Content\Doctor\assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Content\Doctor\assets\js\jquery-ui.min.html" />
+    <Content Include="Content\Doctor\assets\js\jquery.dataTables.min.js" />
+    <Content Include="Content\Doctor\assets\js\jquery.fullcalendar.js" />
+    <Content Include="Content\Doctor\assets\js\jquery.slimscroll.js" />
+    <Content Include="Content\Doctor\assets\js\moment.min.js" />
+    <Content Include="Content\Doctor\assets\js\popper.min.js" />
+    <Content Include="Content\Doctor\assets\js\select2.min.js" />
+    <Content Include="Content\Doctor\assets\js\tagsinput.js" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\css\lightgallery.min.css" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\fonts\lgd641.svg" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\img\loading.gif" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\img\video-play.png" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\img\vimeo-play.png" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\img\youtube-play.png" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\js\lightgallery-all.min.js" />
+    <Content Include="Content\Doctor\assets\plugins\summernote\dist\summernote-bs4.css" />
+    <Content Include="Content\Doctor\assets\plugins\summernote\dist\summernote-bs4.min.js" />
+    <Content Include="Content\Patient\css\style.css" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Black.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BlackItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Bold.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BoldItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBold.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLight.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Italic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Light.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-LightItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Medium.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-MediumItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Regular.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBold.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Thin.svg" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ThinItalic.svg" />
+    <Content Include="Content\Patient\fonts\poppins\poppins.css" />
+    <Content Include="Content\Patient\images\about\img.jpg" />
+    <Content Include="Content\Patient\images\banner\background1.png" />
+    <Content Include="Content\Patient\images\blog_grid\img-1.jpg" />
+    <Content Include="Content\Patient\images\blog_grid\img.jpg" />
+    <Content Include="Content\Patient\images\blog_grid\img1.jpg" />
+    <Content Include="Content\Patient\images\blog_grid\img21.jpg" />
+    <Content Include="Content\Patient\images\blog_list\img1.png" />
+    <Content Include="Content\Patient\images\blog_list\img2.png" />
+    <Content Include="Content\Patient\images\blog_list\img3.png" />
+    <Content Include="Content\Patient\images\blog_list\img4.png" />
+    <Content Include="Content\Patient\images\blog_list\main\img.jpg" />
+    <Content Include="Content\Patient\images\blog_list\main\img1.jpg" />
+    <Content Include="Content\Patient\images\blog_list\main\img2.jpg" />
+    <Content Include="Content\Patient\images\blog_list\main\img3.jpg" />
+    <Content Include="Content\Patient\images\blog_list\main\img4.jpg" />
+    <Content Include="Content\Patient\images\btn-play.png" />
+    <Content Include="Content\Patient\images\counter\background4.png" />
+    <Content Include="Content\Patient\images\departments\img.jpg" />
+    <Content Include="Content\Patient\images\doctor\img-1.jpg" />
+    <Content Include="Content\Patient\images\doctor\img-2.jpg" />
+    <Content Include="Content\Patient\images\doctor\img.jpg" />
+    <Content Include="Content\Patient\images\doctor\img1.jpg" />
+    <Content Include="Content\Patient\images\favicon.png" />
+    <Content Include="Content\Patient\images\gallery\1.jpg" />
+    <Content Include="Content\Patient\images\gallery\2.jpg" />
+    <Content Include="Content\Patient\images\gallery\3.jpg" />
+    <Content Include="Content\Patient\images\gallery\4.jpg" />
+    <Content Include="Content\Patient\images\gallery\5.jpg" />
+    <Content Include="Content\Patient\images\gallery\6.jpg" />
+    <Content Include="Content\Patient\images\gallery\7.jpg" />
+    <Content Include="Content\Patient\images\gallery\8.jpg" />
+    <Content Include="Content\Patient\images\gallery\9.jpg" />
+    <Content Include="Content\Patient\images\home1\banner\background.jpg" />
+    <Content Include="Content\Patient\images\home1\banner\background1.jpg" />
+    <Content Include="Content\Patient\images\home1\banner\background2.jpg" />
+    <Content Include="Content\Patient\images\home1\lastestpost\img2.png" />
+    <Content Include="Content\Patient\images\home1\lastestpost\img3.png" />
+    <Content Include="Content\Patient\images\home1\lastestpost\img4.png" />
+    <Content Include="Content\Patient\images\home1\lastestpost\img5.png" />
+    <Content Include="Content\Patient\images\icons_box\background2.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_1\icon-1.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_1\icon-2.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_1\icon-3.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_1\icon-4.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_1\icon-5.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_1\icon.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_4\icon-1.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_4\icon-2.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_4\icon-3.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_4\icon-4.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_4\icon-5.png" />
+    <Content Include="Content\Patient\images\icons_box\icon_4\icon.png" />
+    <Content Include="Content\Patient\images\logo-home-2.png" />
+    <Content Include="Content\Patient\images\logo.png" />
+    <Content Include="Content\Patient\images\logowhite.png" />
+    <Content Include="Content\Patient\images\partner\1.png" />
+    <Content Include="Content\Patient\images\partner\2.png" />
+    <Content Include="Content\Patient\images\partner\3.png" />
+    <Content Include="Content\Patient\images\partner\4.png" />
+    <Content Include="Content\Patient\images\partner\5.png" />
+    <Content Include="Content\Patient\images\partner\6.png" />
+    <Content Include="Content\Patient\images\paypal.jpg" />
+    <Content Include="Content\Patient\images\services\background3.png" />
+    <Content Include="Content\Patient\images\services\img.jpg" />
+    <Content Include="Content\Patient\images\services\img1.jpg" />
+    <Content Include="Content\Patient\images\services\img2.jpg" />
+    <Content Include="Content\Patient\images\services\img3.jpg" />
+    <Content Include="Content\Patient\images\services\underline.png" />
+    <Content Include="Content\Patient\images\services\underline1.png" />
+    <Content Include="Content\Patient\images\shop\img-1.png" />
+    <Content Include="Content\Patient\images\shop\img-2.png" />
+    <Content Include="Content\Patient\images\shop\img-3.png" />
+    <Content Include="Content\Patient\images\shop\img-4.png" />
+    <Content Include="Content\Patient\images\shop\img.png" />
+    <Content Include="Content\Patient\images\shop\img1.png" />
+    <Content Include="Content\Patient\images\single-post\img11.html" />
+    <Content Include="Content\Patient\images\single-product\review\img10.jpg" />
+    <Content Include="Content\Patient\images\single-product\review\img7.jpg" />
+    <Content Include="Content\Patient\images\single-product\review\img8.jpg" />
+    <Content Include="Content\Patient\images\single-product\review\img9.jpg" />
+    <Content Include="Content\Patient\images\single_post\img-1.jpg" />
+    <Content Include="Content\Patient\images\single_post\img.jpg" />
+    <Content Include="Content\Patient\images\single_post\img2.jpg" />
+    <Content Include="Content\Patient\images\single_post\img42.jpg" />
+    <Content Include="Content\Patient\images\single_post\img5.jpg" />
+    <Content Include="Content\Patient\images\single_post\img6.jpg" />
+    <Content Include="Content\Patient\images\team\img.png" />
+    <Content Include="Content\Patient\images\team\img1.png" />
+    <Content Include="Content\Patient\images\team\img2.png" />
+    <Content Include="Content\Patient\images\team\img3.png" />
+    <Content Include="Content\Patient\images\testimonial\img.png" />
+    <Content Include="Content\Patient\images\testimonial\img1.png" />
+    <Content Include="Content\Patient\js\main.js" />
+    <Content Include="Content\Patient\plugin\animsition\css\animate.css" />
+    <Content Include="Content\Patient\plugin\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\Patient\plugin\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\Patient\plugin\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Patient\plugin\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\Patient\plugin\counterup\jquery.counterup.min.js" />
+    <Content Include="Content\Patient\plugin\datetimepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\Patient\plugin\datetimepicker\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Content\Patient\plugin\datetimepicker\bootstrap-datepicker3.css" />
+    <Content Include="Content\Patient\plugin\datetimepicker\bootstrap-datetimepicker.fr.js" />
+    <Content Include="Content\Patient\plugin\datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Content\Patient\plugin\datetimepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\Patient\plugin\datetimepicker\moment.min.js" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\Patient\plugin\img\video-play.html" />
+    <Content Include="Content\Patient\plugin\img\vimeo-play.html" />
+    <Content Include="Content\Patient\plugin\img\youtube-play.html" />
+    <Content Include="Content\Patient\plugin\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\Patient\plugin\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\Patient\plugin\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\Patient\plugin\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\Patient\plugin\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\Patient\plugin\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Patient\plugin\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Content\Patient\plugin\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\Patient\plugin\jquery\jquery-2.0.2.min.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lg-autoplay.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lg-fullscreen.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lg-hash.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lg-pager.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lg-share.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lg-zoom.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\lightgallery.css" />
+    <Content Include="Content\Patient\plugin\lightgallery\lightgallery.js" />
+    <Content Include="Content\Patient\plugin\lightgallery\pictrure\lgd641.svg" />
+    <Content Include="Content\Patient\plugin\lightgallery\picturefill.min.js" />
+    <Content Include="Content\Patient\plugin\masonry\masonry.pkgd.min.js" />
+    <Content Include="Content\Patient\plugin\mediaelement\images\mejs-controls.svg" />
+    <Content Include="Content\Patient\plugin\mediaelement\mediaelement-and-player.js" />
+    <Content Include="Content\Patient\plugin\mediaelement\mediaelementplayer.css" />
+    <Content Include="Content\Patient\plugin\owl-carouse\owl.carousel.min.css" />
+    <Content Include="Content\Patient\plugin\owl-carouse\owl.carousel.min.js" />
+    <Content Include="Content\Patient\plugin\owl-carouse\owl.theme.default.min.css" />
+    <Content Include="Content\Patient\plugin\owl-carouse\owl.video.play.html" />
+    <Content Include="Content\Patient\plugin\process-bar\tox-progress.css" />
+    <Content Include="Content\Patient\plugin\process-bar\tox-progress.js" />
+    <Content Include="Content\Patient\plugin\sticky\jquery.sticky.js" />
+    <Content Include="Content\Patient\plugin\waypoint\jquery.waypoints.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Black.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Black.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Black.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Blackd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BlackItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BlackItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BlackItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BlackItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Bold.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Bold.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Bold.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Boldd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BoldItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BoldItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BoldItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-BoldItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBold.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBold.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBold.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraBoldItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLight.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLight.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLight.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ExtraLightItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Italic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Italic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Italic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Italicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Light.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Light.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Light.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Lightd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-LightItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-LightItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-LightItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-LightItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Medium.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Medium.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Medium.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Mediumd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-MediumItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-MediumItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-MediumItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-MediumItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Regular.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Regular.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Regular.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Regulard41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBold.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBold.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBold.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-SemiBoldItalicd41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Thin.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Thin.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Thin.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-Thind41d.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ThinItalic.eot" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ThinItalic.woff" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ThinItalic.woff2" />
+    <Content Include="Content\Patient\fonts\poppins\Poppins-ThinItalicd41d.eot" />
+    <Content Include="Content\Patient\plugin\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Patient\plugin\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Patient\plugin\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Patient\plugin\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Patient\plugin\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Content\Patient\plugin\fonts\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\Patient\plugin\lightgallery\pictrure\lgd41d.eot" />
+    <Content Include="Content\Patient\plugin\lightgallery\pictrure\lgd641.eot" />
+    <Content Include="Content\Patient\plugin\lightgallery\pictrure\lgd641.ttf" />
+    <Content Include="Content\Patient\plugin\lightgallery\pictrure\lgd641.woff" />
+    <Content Include="Content\Doctor\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\Doctor\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\Doctor\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\Doctor\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\fonts\lgd41d.eot" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\fonts\lgd641.eot" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\fonts\lgd641.ttf" />
+    <Content Include="Content\Doctor\assets\plugins\light-gallery\fonts\lgd641.woff" />
+    <Content Include="Content\Doctor\assets\plugins\summernote\dist\font\summernote4c4d.eot" />
+    <Content Include="Content\Doctor\assets\plugins\summernote\dist\font\summernote4c4d.ttf" />
+    <Content Include="Content\Doctor\assets\plugins\summernote\dist\font\summernote4c4d.woff" />
+    <Content Include="Content\Doctor\assets\plugins\summernote\dist\font\summernoted41d.eot" />
+    <Content Include="Content\Admin\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Admin\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Admin\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Admin\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Admin\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Admin\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Admin\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Admin\assets\lineicons\fonts\linecons.eot" />
+    <Content Include="Content\Admin\assets\lineicons\fonts\linecons.ttf" />
+    <Content Include="Content\Admin\assets\lineicons\fonts\linecons.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout_Patient.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\IndexPatient.cshtml" />
+    <Content Include="Views\Shared\_Layout_Doctor.cshtml" />
+    <Content Include="Views\Home\IndexDoctor.cshtml" />
+    <Content Include="Views\Home\IndexAdmin.cshtml" />
+    <Content Include="Views\Shared\_Layout_Admin.cshtml" />
+    <Content Include="Views\ADMIN_tbl\Create.cshtml" />
+    <Content Include="Views\ADMIN_tbl\Delete.cshtml" />
+    <Content Include="Views\ADMIN_tbl\Details.cshtml" />
+    <Content Include="Views\ADMIN_tbl\Edit.cshtml" />
+    <Content Include="Views\ADMIN_tbl\Index.cshtml" />
+    <Content Include="Views\APPOINTMENT_tbl\Create.cshtml" />
+    <Content Include="Views\APPOINTMENT_tbl\Delete.cshtml" />
+    <Content Include="Views\APPOINTMENT_tbl\Details.cshtml" />
+    <Content Include="Views\APPOINTMENT_tbl\Edit.cshtml" />
+    <Content Include="Views\APPOINTMENT_tbl\Index.cshtml" />
+    <Content Include="Views\DEPARTMENT_tbl\Create.cshtml" />
+    <Content Include="Views\DEPARTMENT_tbl\Delete.cshtml" />
+    <Content Include="Views\DEPARTMENT_tbl\Details.cshtml" />
+    <Content Include="Views\DEPARTMENT_tbl\Edit.cshtml" />
+    <Content Include="Views\DEPARTMENT_tbl\Index.cshtml" />
+    <Content Include="Views\DOCTOR_SCHEDULE\Create.cshtml" />
+    <Content Include="Views\DOCTOR_SCHEDULE\Delete.cshtml" />
+    <Content Include="Views\DOCTOR_SCHEDULE\Details.cshtml" />
+    <Content Include="Views\DOCTOR_SCHEDULE\Edit.cshtml" />
+    <Content Include="Views\DOCTOR_SCHEDULE\Index.cshtml" />
+    <Content Include="Views\DOCTOR_tbl\Create.cshtml" />
+    <Content Include="Views\DOCTOR_tbl\Delete.cshtml" />
+    <Content Include="Views\DOCTOR_tbl\Details.cshtml" />
+    <Content Include="Views\DOCTOR_tbl\Edit.cshtml" />
+    <Content Include="Views\DOCTOR_tbl\Index.cshtml" />
+    <Content Include="Views\HOSPITAL_tbl\Create.cshtml" />
+    <Content Include="Views\HOSPITAL_tbl\Delete.cshtml" />
+    <Content Include="Views\HOSPITAL_tbl\Details.cshtml" />
+    <Content Include="Views\HOSPITAL_tbl\Edit.cshtml" />
+    <Content Include="Views\HOSPITAL_tbl\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51790</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44372/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,58 @@
+﻿@model Tele_Health.Models.DOCTOR_SCHEDULE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DOCTOR_SCHEDULE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DOCTOR_tbl.DOCTOR_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOCTOR_tbl.DOCTOR_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TOTAL_APPOINTMENTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TOTAL_APPOINTMENTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DAY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DAY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SCHEDULE_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

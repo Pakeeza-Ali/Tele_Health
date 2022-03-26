@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Tele_Health.Models.APPOINTMENT_tbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DOCTOR_SCHEDULE.TOTAL_APPOINTMENTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PATIENT_tbl.PATIENT_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APPOINTMENT_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APPOINTMENT_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOCTOR_FID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCHEDULE_FID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOCTOR_SCHEDULE.TOTAL_APPOINTMENTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PATIENT_tbl.PATIENT_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APPOINTMENT_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APPOINTMENT_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOCTOR_FID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCHEDULE_FID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.APPOINTMENT_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.APPOINTMENT_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.APPOINTMENT_ID })
+        </td>
+    </tr>
+}
+
+</table>

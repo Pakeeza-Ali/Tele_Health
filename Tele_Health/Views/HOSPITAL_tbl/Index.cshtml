@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Tele_Health.Models.HOSPITAL_tbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HOSPITAL_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOSPITAL_ADDRESS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOSPITAL_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOSPITAL_ADDRESS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HOSPITAL_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HOSPITAL_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HOSPITAL_ID })
+        </td>
+    </tr>
+}
+
+</table>
